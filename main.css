@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root{
+    --dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+	/* display:flex;
+	align-items: center;
+	justify-content: center; */
+}
+body{
+	display: flex;
+	flex-direction: column;
+	/* align-items: center;
+	justify-content: center; */
+	min-height: 100vh;
+	background: var(--dark);
+	color: #EEE;
+
+
+}
+header{
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+header h1{
+	font-size: 3rem;
+	font-weight: 300;
+	color: var(--light);
+	margin-bottom: 1rem;
+	font-family:'Oswald';
+
+}
+#new-task-form {
+	display: flex;
+}
+
+
+
+input, button{
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	font-family:'Oswald';
+	
+
+}
+#new-task-input{
+	flex: 110%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color:var(--light);
+	font-size: 1.25rem;
+	font-family:'Oswald';
+
+}
+#new-task-submit{
+	color: var(--pink);
+	font-weight: 800;
+	font-size: 1.25rem;
+	background-color: var(--light);
+	opacity: 0.8;
+}
+#new-task-submit:hover{
+	cursor: pointer;
+}
+main{
+	flex: 110%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+.task-list{
+	padding: 1rem;
+}
+.task-list h2{
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--purple);
+	margin-bottom: 1rem;
+	font-family:'Oswald';
+
+}
+#tasks .task{
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+#tasks .task .content .text {
+	color: var(--light);
+	font-size: 1.25rem;
+	width: 100%;
+	display: block;
+	transition: 0.5s;
+}
+
+#tasks .task .content .task:not(:read-only){
+	color: var(--grey);
+}
+#tasks .task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+
+}
+.task.actions button{
+	cursor: pointer;
+	margin: 0 -0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+
+}
+.task .actions button:hover{
+	opacity: 0.8;
+}
+.task .actions .edit{
+	color: var(--pink);
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.task .actions .delete{
+	color: crimson;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
